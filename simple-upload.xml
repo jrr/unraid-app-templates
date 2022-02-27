@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<Container version="2">
+  <Name>simple-upload</Name>
+  <Repository>jrrr/simple-upload</Repository>
+  <Registry>https://hub.docker.com/r/jrrr/simple-upload</Registry>
+  <Network>bridge</Network>
+  <MyIP />
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support />
+  <Project>https://github.com/jrr/simple-upload</Project>
+  <Overview>Web interface to upload files to your server.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8000]/web/index.html</WebUI>
+  <TemplateURL />
+  <Icon
+  >https://raw.githubusercontent.com/jrr/unraid-app-templates/main/images/arrow.svg</Icon>
+  <ExtraParams />
+  <PostArgs />
+  <CPUset />
+  <DateInstalled>1645932882</DateInstalled>
+  <DonateText />
+  <DonateLink />
+  <Description>Web interface to upload files to your server.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/simple-upload</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment />
+  <Labels />
+  <Config
+    Name="Host Path 1"
+    Target="/data"
+    Default=""
+    Mode="rw"
+    Description="Container Path: /data"
+    Type="Path"
+    Display="always"
+    Required="false"
+    Mask="false"
+  >/mnt/user/appdata/simple-upload</Config>
+  <Config
+    Name="8000"
+    Target="8000"
+    Default=""
+    Mode="tcp"
+    Description="Container Port: 8000"
+    Type="Port"
+    Display="always"
+    Required="false"
+    Mask="false"
+  >8000</Config>
+</Container>
